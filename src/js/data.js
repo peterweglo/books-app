@@ -49,7 +49,7 @@ dataSource.books = [
     id: 5,
     name: 'Of Mice and Men',
     image: 'images/books/5.jpg',
-    rating: 6.4,
+    rating: 2.8,
     price: 40,
     details: {
       adults: true,
