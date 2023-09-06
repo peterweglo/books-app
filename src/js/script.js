@@ -104,7 +104,6 @@
               );
               thisBooks.favoriteBooks.push(bookId);
             }
-            console.log(thisBooks.favoriteBooks);
           }
         }
       );
