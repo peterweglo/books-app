@@ -9,8 +9,8 @@ dataSource.books = [
     image: 'images/books/1.jpg',
     details: {
       adults: true,
-      nonFiction: false
-    }
+      nonFiction: false,
+    },
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ dataSource.books = [
     image: 'images/books/2.jpg',
     details: {
       adults: false,
-      nonFiction: true
-    }
+      nonFiction: true,
+    },
   },
   {
     id: 3,
@@ -31,8 +31,8 @@ dataSource.books = [
     rating: 7.8,
     details: {
       adults: false,
-      nonFiction: true
-    }
+      nonFiction: true,
+    },
   },
   {
     id: 4,
@@ -42,8 +42,8 @@ dataSource.books = [
     rating: 8.2,
     details: {
       adults: false,
-      nonFiction: true
-    }
+      nonFiction: true,
+    },
   },
   {
     id: 5,
@@ -52,8 +52,8 @@ dataSource.books = [
     rating: 6.4,
     price: 40,
     details: {
-      adults: false,
-      nonFiction: false
-    }
+      adults: true,
+      nonFiction: true,
+    },
   },
 ];
