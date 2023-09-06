@@ -74,38 +74,53 @@
           }
         }
         console.log(filters);
-        // const books = document.querySelectorAll('book__image');
+
         for (const book of dataSource.books) {
-          if (filters.includes('adults') && book.details.adults == false) {
-            const filtredBookId = book.id;
-            document
-              .querySelector(`[data-id="${filtredBookId}"]`)
-              .classList.add('hidden');
-          } else if (
-            filters.includes('nonFiction') &&
-            book.details.nonFiction == false
-          ) {
-            const filtredBookId = book.id;
-            document
-              .querySelector(`[data-id="${filtredBookId}"]`)
-              .classList.add('hidden');
-          } else if (
-            filters.includes('adults') == false &&
-            book.details.adults == false
-          ) {
-            const filtredBookId = book.id;
-            document
-              .querySelector(`[data-id="${filtredBookId}"]`)
-              .classList.remove('hidden');
-          } else if (
-            filters.includes('nonFiction') == false &&
-            book.details.nonFiction == false
-          ) {
-            const filtredBookId = book.id;
-            document
-              .querySelector(`[data-id="${filtredBookId}"]`)
-              .classList.remove('hidden');
+          let flagHidden = false;
+          const bookDOM = document.querySelector(`[data-id="${book.id}"]`);
+
+          for (const filter of filters) {
+            if (book.details[filter] == false) {
+              flagHidden = true;
+              break;
+            }
           }
+          if (flagHidden) {
+            bookDOM.classList.add('hidden');
+          } else {
+            bookDOM.classList.remove('hidden');
+          }
+
+          // if (filters.includes('adults') && book.details.adults == false) {
+          //   const filtredBookId = book.id;
+          //   document
+          //     .querySelector(`[data-id="${filtredBookId}"]`)
+          //     .classList.add('hidden');
+          // } else if (
+          //   filters.includes('nonFiction') &&
+          //   book.details.nonFiction == false
+          // ) {
+          //   const filtredBookId = book.id;
+          //   document
+          //     .querySelector(`[data-id="${filtredBookId}"]`)
+          //     .classList.add('hidden');
+          // } else if (
+          //   filters.includes('adults') == false &&
+          //   book.details.adults == false
+          // ) {
+          //   const filtredBookId = book.id;
+          //   document
+          //     .querySelector(`[data-id="${filtredBookId}"]`)
+          //     .classList.remove('hidden');
+          // } else if (
+          //   filters.includes('nonFiction') == false &&
+          //   book.details.nonFiction == false
+          // ) {
+          //   const filtredBookId = book.id;
+          //   document
+          //     .querySelector(`[data-id="${filtredBookId}"]`)
+          //     .classList.remove('hidden');
+          // }
         }
       });
     };
